@@ -1,0 +1,60 @@
+/* components/PostDetail.css */
+.post-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.post {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.post p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.comments h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.comment {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.comment h4 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.comment-email {
+  color: #3498db;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}

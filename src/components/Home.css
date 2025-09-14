@@ -1,0 +1,53 @@
+/* components/Home.css */
+.home h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.post-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.post-card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
