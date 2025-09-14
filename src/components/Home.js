@@ -34,6 +34,26 @@ const Home = () => {
     fetchPosts();
   }, []);
 
+  // Функция для удаления поста
+  const handleDeletePost = async (postId) => {
+    if (!window.confirm('Вы уверены, что хотите удалить этот пост?')) return;
+
+    try {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) throw new Error('Ошибка при удалении поста');
+      
+      // Удаляем пост из локального состояния
+      setPosts(posts.filter(post => post.id !== postId));
+      alert('Пост успешно удален!');
+    } catch (error) {
+      console.error('Ошибка при удалении:', error);
+      alert('Ошибка при удалении поста');
+    }
+  };
+
   // Фильтрация постов по поисковому запросу
   const filteredPosts = posts.filter(post =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())
